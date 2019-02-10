@@ -6,8 +6,10 @@ import java.io.*;
 
 // ユーザーが代入、参照可能な変数
 public class Variable extends Evaluable {
+
+	private static final String filedir = "./obj"; // シリアライズ保存につかうファイルディレクトリ
 	
-	private static final String filepath = "obj/variables.obj"; // シリアライズ保存につかうファイルパス
+	private static final String filepath = filedir + "/variables.obj"; // シリアライズ保存につかうファイルパス
 
 	// 各変数の値
 	public static Value variables[] = new Value[27];
@@ -64,10 +66,19 @@ public class Variable extends Evaluable {
 		}
 		return str;
 	}
+
+	// フォルダがなければ作る
+	private static void mkdirIfNotExists() {
+		File newdir = new File(filedir);
+		if (!newdir.exists()) {
+			newdir.mkdir();
+		}
+	}
 	
 	// ディスクからデシリアライズする
 	public static void loadFromDisk () {
 		try {
+			mkdirIfNotExists();
 			FileInputStream fis = new FileInputStream(filepath);
 			ObjectInputStream ois = new ObjectInputStream(fis);
 			variables = (Value[])ois.readObject();
@@ -80,6 +91,7 @@ public class Variable extends Evaluable {
 	
 	// ディスクへシリアライズ保存する
 	public static void saveToDisk () {
+		mkdirIfNotExists();
 		try {
 			FileOutputStream fos = new FileOutputStream(filepath);
 			ObjectOutputStream oos = new ObjectOutputStream(fos);
