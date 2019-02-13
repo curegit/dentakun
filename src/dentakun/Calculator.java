@@ -18,7 +18,7 @@ import java.io.*;
 public class Calculator {
 
 	// プログラム情報定数
-	public static final String TITLE = "JAVA関数電卓 -電卓ん-";
+	public static final String TITLE = "電卓君";
 
 	// シングルトン
 	public static Calculator root; // 計算機(自身)
