@@ -10,6 +10,8 @@ import dentakun.exceptions.InvalidOperation;
 import dentakun.exceptions.InvalidNarrowingConversion;
 import dentakun.exceptions.RangeExceeded;
 import java.text.DecimalFormat;
+import java.net.URLDecoder;
+import java.io.*;
 
 // 計算機のメインクラス
 // エントリポイントを含む
@@ -33,6 +35,18 @@ public class Calculator {
 		root = this;
 		sentence = new Sentence();
 		ui = new UI(1000, 700);
+	}
+
+	// 実行用バイナリファイルの場所を返す
+	public String rootDir () {
+		try {
+			String binpath = URLDecoder.decode(getClass().getProtectionDomain().getCodeSource().getLocation().getPath(), "UTF-8");
+			File binf = new File(binpath);
+			return binf.getParent();
+		} catch (Exception e) {
+			System.out.println("ディレクトリ情報を取得できません");
+			return null;
+		}
 	}
 
 	// 演算する

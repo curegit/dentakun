@@ -1,4 +1,5 @@
 package dentakun.elements.evaluables;
+import dentakun.Calculator;
 import dentakun.elements.Evaluable;
 import dentakun.elements.evaluables.Value;
 import dentakun.elements.evaluables.value.Real;
@@ -7,14 +8,21 @@ import java.io.*;
 // ユーザーが代入、参照可能な変数
 public class Variable extends Evaluable {
 
-	private static final String filedir = "./obj"; // シリアライズ保存につかうファイルディレクトリ
-	
-	private static final String filepath = filedir + "/variables.obj"; // シリアライズ保存につかうファイルパス
-
 	// 各変数の値
 	public static Value variables[] = new Value[27];
+
 	// 各変数の表記
 	public static String syn[] = {"A", "B", "C'", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P'", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z", "(ans)"};
+
+	// シリアライズ保存につかうファイルディレクトリ
+	private static String filedir () {
+		return Calculator.root.rootDir() + "/obj";
+	}
+	
+	// シリアライズ保存につかうファイルパス
+	private static String filepath () {
+		return filedir() + "/variables.obj"; 
+	}
 
 	// 変数の0初期化
 	static {
@@ -69,7 +77,7 @@ public class Variable extends Evaluable {
 
 	// フォルダがなければ作る
 	private static void mkdirIfNotExists() {
-		File newdir = new File(filedir);
+		File newdir = new File(filedir());
 		if (!newdir.exists()) {
 			newdir.mkdir();
 		}
@@ -79,7 +87,7 @@ public class Variable extends Evaluable {
 	public static void loadFromDisk () {
 		try {
 			mkdirIfNotExists();
-			FileInputStream fis = new FileInputStream(filepath);
+			FileInputStream fis = new FileInputStream(filepath());
 			ObjectInputStream ois = new ObjectInputStream(fis);
 			variables = (Value[])ois.readObject();
 			ois.close();
@@ -93,7 +101,7 @@ public class Variable extends Evaluable {
 	public static void saveToDisk () {
 		mkdirIfNotExists();
 		try {
-			FileOutputStream fos = new FileOutputStream(filepath);
+			FileOutputStream fos = new FileOutputStream(filepath());
 			ObjectOutputStream oos = new ObjectOutputStream(fos);
 			oos.writeObject(variables);
 			oos.flush();
