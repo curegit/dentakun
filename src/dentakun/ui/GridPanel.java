@@ -251,7 +251,7 @@ public class GridPanel extends JPanel {
 		layout.setConstraints(varsButton, gbc);
 		varsButton.addActionListener(new ActionListener () {
 			public void actionPerformed (ActionEvent e) {
-				JOptionPane.showMessageDialog(Calculator.ui, Variable.getAllString());
+				JOptionPane.showMessageDialog(Calculator.ui, Variable.getAllString(), "変数", JOptionPane.INFORMATION_MESSAGE);
 			}
 		});
 		varsButton.addKeyListener(k);
