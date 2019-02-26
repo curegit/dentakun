@@ -32,6 +32,7 @@ public class UI extends JFrame implements KeyListener {
 	public UI () {
 		// フレームを作成
 		setSize(1000, 700);
+		setMinimumSize(new Dimension(1000, 600));
 		setTitle(Calculator.TITLE);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		// レイアウト
