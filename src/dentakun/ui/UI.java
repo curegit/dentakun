@@ -29,9 +29,9 @@ public class UI extends JFrame implements KeyListener {
 	public final GridPanel gridPanel; // 入力部
 	
 	// 対応する計算機のGUIフレームを作成する
-	public UI (int width, int height) {
+	public UI () {
 		// フレームを作成
-		setSize(width, height);
+		setSize(1000, 700);
 		setTitle(Calculator.TITLE);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		// レイアウト

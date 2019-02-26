@@ -34,7 +34,7 @@ public class Calculator {
 	private Calculator () {
 		root = this;
 		sentence = new Sentence();
-		ui = new UI(1000, 700);
+		ui = new UI();
 	}
 
 	// 実行用バイナリファイルの場所を返す
