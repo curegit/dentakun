@@ -534,7 +534,7 @@ public class GridPanel extends JPanel {
 		plusButton.addKeyListener(k);
 		add(plusButton);
 		// -追加
-		JButton minusButton = new JButton("?");
+		JButton minusButton = new JButton("−");
 		minusButton.setForeground(buttonTextColor);
 		minusButton.setBackground(buttonColor);
 		gbc.gridx = 13;

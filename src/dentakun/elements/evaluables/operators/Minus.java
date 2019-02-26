@@ -21,6 +21,6 @@ public class Minus extends Binary {
 
 	// 表記を取得
 	public String toString () {
-		return "?";
+		return "−";
 	}
 }
