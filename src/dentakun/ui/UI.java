@@ -49,6 +49,9 @@ public class UI extends JFrame implements KeyListener {
 		gridPanel.setBackground(new Color(152, 152, 230));
 		// アイコン設定
 		ImageIcon icon = new ImageIcon(Calculator.root.rootDir() + "/img/icon.png");
+		if (Taskbar.isTaskbarSupported()) {
+			Taskbar.getTaskbar().setIconImage(icon.getImage());
+		}
 		setIconImage(icon.getImage());
 		// 可視化
 		setVisible(true);
