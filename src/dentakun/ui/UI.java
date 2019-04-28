@@ -30,6 +30,13 @@ public class UI extends JFrame implements KeyListener {
 	
 	// 対応する計算機のGUIフレームを作成する
 	public UI () {
+		// Look and Feelをクロスプラットフォームなものにする
+		try {
+			String lookAndFeel = UIManager.getCrossPlatformLookAndFeelClassName();
+			UIManager.setLookAndFeel(lookAndFeel);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 		// フレームを作成
 		setSize(1080, 700);
 		setMinimumSize(new Dimension(1000, 600));
