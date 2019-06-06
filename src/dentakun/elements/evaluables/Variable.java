@@ -70,7 +70,7 @@ public class Variable extends Evaluable {
 	public static String getAllString () {
 		String str = "";
 		for (int i = 0; i < 27; i++) {
-			str += syn[i].toString() + " = " + variables[i].toReal().getX() + "\n";
+			str += syn[i].toString() + " = " + variables[i].toReal().getX() + System.lineSeparator();
 		}
 		return str;
 	}
@@ -92,7 +92,7 @@ public class Variable extends Evaluable {
 			variables = (Value[])ois.readObject();
 			ois.close();
 		} catch (IOException | ClassNotFoundException e) {
-			System.out.println("変数のファイルが見つかりませんでした。新規作成します。\n");
+			System.out.println("変数のファイルが見つかりませんでした。新規作成します。" + System.lineSeparator());
 			zeroAll();
 		}
 	}
