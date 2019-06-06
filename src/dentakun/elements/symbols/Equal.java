@@ -9,7 +9,7 @@ public class Equal extends Symbol {
 	public Equal () {
 		priority = -100;
 	}
-	
+
 	// 表記を返す
 	public String toString () {
 		return "=";

@@ -74,7 +74,7 @@ import javax.swing.*;
 // コンストラクタで各種コンポーネント追加とイベントの登録を行う
 @SuppressWarnings("serial")
 public class GridPanel extends JPanel {
-	
+
 	private final Color buttonColor = new Color(20, 20, 20); // ボタンの背景色
 	private final Color buttonTextColor = new Color(255, 255, 255); // ボタンの前面色
 

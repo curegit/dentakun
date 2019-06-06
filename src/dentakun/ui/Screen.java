@@ -8,7 +8,7 @@ import dentakun.Calculator;
 // 入力と出力を表示する
 @SuppressWarnings("serial")
 public class Screen extends JPanel {
-	
+
 	private final JTextArea in; // 入力式
 	private final JTextArea out; // 結果
 
@@ -52,7 +52,7 @@ public class Screen extends JPanel {
 	public void setOut (String s) {
 		out.setText(s);
 	}
-	
+
 	// 表示されている出力結果を取得する
 	public String getOut () {
 		return out.getText();

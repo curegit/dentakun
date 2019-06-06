@@ -33,7 +33,7 @@ public class Const extends Evaluable {
 	public Value evaluate () {
 		return value;
 	}
-	
+
 	// 表記を返す
 	public String toString () {
 		return syn;

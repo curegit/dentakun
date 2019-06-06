@@ -41,7 +41,7 @@ public class Assignment extends Evaluable {
 		Variable.variables[i] = v;
 		return v;
 	}
-	
+
 	// 表記を返す
 	public String toString () {
 		return "←";

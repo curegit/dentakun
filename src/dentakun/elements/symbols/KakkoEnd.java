@@ -8,7 +8,7 @@ public class KakkoEnd extends Symbol {
 	public KakkoEnd () {
 		priority = 60;
 	}
-	
+
 	// 表記を返す
 	public String toString () {
 		return ")";

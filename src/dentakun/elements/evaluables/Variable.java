@@ -18,10 +18,10 @@ public class Variable extends Evaluable {
 	private static String filedir () {
 		return Calculator.root.rootDir() + "/obj";
 	}
-	
+
 	// シリアライズ保存につかうファイルパス
 	private static String filepath () {
-		return filedir() + "/variables.obj"; 
+		return filedir() + "/variables.obj";
 	}
 
 	// 変数の0初期化
@@ -57,7 +57,7 @@ public class Variable extends Evaluable {
 	public String toString () {
 		return syn[i];
 	}
-	
+
 	// すべての変数を0初期化する
 	public static void zeroAll () {
 		for (int i = 0; i < 27; i++) {
@@ -65,7 +65,7 @@ public class Variable extends Evaluable {
 		}
 		saveToDisk();
 	}
-	
+
 	// すべての変数の状態を表す文字列を返す
 	public static String getAllString () {
 		String str = "";
@@ -82,7 +82,7 @@ public class Variable extends Evaluable {
 			newdir.mkdir();
 		}
 	}
-	
+
 	// ディスクからデシリアライズする
 	public static void loadFromDisk () {
 		try {
@@ -96,7 +96,7 @@ public class Variable extends Evaluable {
 			zeroAll();
 		}
 	}
-	
+
 	// ディスクへシリアライズ保存する
 	public static void saveToDisk () {
 		mkdirIfNotExists();

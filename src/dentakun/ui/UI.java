@@ -27,7 +27,7 @@ public class UI extends JFrame implements KeyListener {
 
 	public final Screen screen; // 表示部
 	public final GridPanel gridPanel; // 入力部
-	
+
 	// 対応する計算機のGUIフレームを作成する
 	public UI () {
 		// Look and Feelをクロスプラットフォームなものにする
@@ -63,7 +63,7 @@ public class UI extends JFrame implements KeyListener {
 		// 可視化
 		setVisible(true);
 	}
-	
+
 	// キーボードショートカットのキーが押された時
 	public void keyPressed (KeyEvent e) {
 		int keyCode = e.getKeyCode();
@@ -94,7 +94,7 @@ public class UI extends JFrame implements KeyListener {
 		// その他
 		} else {
 			switch (keyCode) {
-				case KeyEvent.VK_LEFT: 
+				case KeyEvent.VK_LEFT:
 					Calculator.sentence.left();
 					break;
 				case KeyEvent.VK_RIGHT:

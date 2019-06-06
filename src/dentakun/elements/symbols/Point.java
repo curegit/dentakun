@@ -8,7 +8,7 @@ public class Point extends Symbol {
 	public Point () {
 		priority = 100;
 	}
-	
+
 	// 表記を返す
 	public String toString () {
 		return ".";

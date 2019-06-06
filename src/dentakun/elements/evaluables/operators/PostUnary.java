@@ -5,7 +5,7 @@ import dentakun.exceptions.UnknownError;
 
 // 後置単項演算子のクラス
 public abstract class PostUnary extends Operator {
-	
+
 	protected Evaluable a; // オペランド
 
 	// 子を追加する

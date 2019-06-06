@@ -7,7 +7,7 @@ public class Log extends Function2 {
 
 	// 評価する
 	public Value evaluate () {
-		return new Real(Math.log(b.evaluate().toReal().getX())/Math.log(a.evaluate().toReal().getX()));
+		return new Real(Math.log(b.evaluate().toReal().getX()) / Math.log(a.evaluate().toReal().getX()));
 	}
 
 	// 表記を取得

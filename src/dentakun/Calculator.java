@@ -29,7 +29,7 @@ public class Calculator {
 	public static void main (String[] args) {
 		new Calculator();
 	}
-	
+
 	// コンストラクタ
 	private Calculator () {
 		root = this;
@@ -97,7 +97,7 @@ public class Calculator {
 		} else {
 			DecimalFormat format = new DecimalFormat("#############.##############");
 			String str = format.format(result);
-			ui.screen.setOut(str);	
+			ui.screen.setOut(str);
 		}
 	}
 }

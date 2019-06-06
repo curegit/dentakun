@@ -8,7 +8,7 @@ public class Comma extends Symbol {
 	public Comma () {
 		priority = 50;
 	}
-	
+
 	// 表記を返す
 	public String toString () {
 		return ",";

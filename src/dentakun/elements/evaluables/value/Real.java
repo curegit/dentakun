@@ -7,11 +7,11 @@ import dentakun.exceptions.InvalidNarrowingConversion;
 // 大部分の計算で用いられる
 // 小数点以下を持たなければ整数に縮小できる
 public class Real extends Value {
-	
+
 	public static final long serialVersionUID = 102L; // シリアライズ用バージョン定数
 
 	private double x; // 値
-	
+
 	// コンストラクタ
 	public Real (double x) {
 		this.x = x;

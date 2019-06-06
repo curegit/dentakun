@@ -7,7 +7,7 @@ import java.io.Serializable;
 
 // 値の抽象クラス
 public abstract class Value extends Evaluable implements Serializable {
-	
+
 	public static final long serialVersionUID = 102L; // シリアライズ用バージョン定数
 
 	// 子を追加する（オーバーライド）
