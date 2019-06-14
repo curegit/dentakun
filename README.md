@@ -2,6 +2,8 @@
 
 総和計算や数値積分などを含む関数電卓
 
+![バイナリをダウンロード](https://github.com/curegit/dentakun/releases)
+
 ![スクリーンショット](Screenshot.png)
 
 ## 実行方法
@@ -92,3 +94,7 @@ STORE ボタンによる代入（←）を使うとユーザー変数 (A-Z) に�
 - sn(x,...): 標本標準偏差関数
 - sum(x,...): 合計関数
 - var(x,...): 母分散関数
+
+## ライセンス
+
+![MIT](LICENSE)
