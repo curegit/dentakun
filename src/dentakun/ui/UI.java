@@ -38,7 +38,7 @@ public class UI extends JFrame implements KeyListener {
 			e.printStackTrace();
 		}
 		// フレームを作成
-		setSize(1080, 700);
+		setSize(1000, 600);
 		setMinimumSize(new Dimension(1000, 600));
 		setTitle(Calculator.TITLE);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
