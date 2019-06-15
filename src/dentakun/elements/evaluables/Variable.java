@@ -92,7 +92,6 @@ public class Variable extends Evaluable {
 			variables = (Value[])ois.readObject();
 			ois.close();
 		} catch (IOException | ClassNotFoundException e) {
-			System.out.println("変数のファイルが見つかりませんでした。新規作成します。" + System.lineSeparator());
 			zeroAll();
 		}
 	}
