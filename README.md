@@ -8,7 +8,7 @@
 
 ## 動作条件
 
-- Java Runtime Environment 8.0 以上
+- Java Runtime Environment 8.0 以降
 
 ## 実行方法
 
