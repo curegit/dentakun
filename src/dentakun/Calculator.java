@@ -44,7 +44,7 @@ public class Calculator {
 			File binf = new File(binpath);
 			return binf.getParent();
 		} catch (Exception e) {
-			System.out.println("ディレクトリ情報を取得できません");
+			System.err.println("ディレクトリ情報を取得できません");
 			return null;
 		}
 	}
